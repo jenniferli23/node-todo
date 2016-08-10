@@ -1,4 +1,14 @@
-// set up ======================================================================
+ require("appdynamics").profile({
+  controllerHostName: 'KleinerPerkinsCaufieldByers.saas.appdynamics.com',
+  controllerPort: 443,
+  controllerSslEnabled: true,      // Set to false if controllerPort is not SSL enabled
+  accountName: 'KleinerPerkinsCaufieldByers',
+  accountAccessKey: 'rjf9v3e2nlp7', //required
+  applicationName: 'Heroku-todo', // Enter a name for your application
+  tierName: 'todo-tier',   // Enter custom defined tier name
+  nodeName: 'todo-node',   // Enter custom defined node name
+ });
+ // set up ======================================================================
 var express = require('express');
 var app = express(); 						// create our app w/ express
 var mongoose = require('mongoose'); 				// mongoose for mongodb
